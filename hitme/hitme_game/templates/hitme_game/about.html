@@ -1,0 +1,116 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="{% static 'hitme_game/styles.css' %}">
+
+  <title>About Page</title>
+</head>
+
+<body>
+  <div class="index-background">
+    <div class="container">
+      <div class="jumbotron-gameroom">
+        <div class="row">
+          <div class="col-lg-6 col-md-4 col-sm-2 thumbnail">
+            <img src="https://pbs.twimg.com/profile_images/1874281601/BlackjackIcon_400x400.png" alt="logo" class="img-logo-gameroom">
+          </div>
+          <div class="col-lg-6 col-md-4 col-sm-2">
+            <h1 class="j-tron-text-gameroom j-tron-text-rule">About</h1>
+          </div>
+        </div>
+      </div>
+      
+      <div class="rules-section bg-secondary text-white border border-danger rounded">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-2">
+
+            <a href="{% url 'lobby'%}"><button class="border border-danger btn btn-light rules-leave-button">Exit to Lobby</button></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <h1 class="text-center text-dark"><u>Meet The Team!</u></h1>
+          </div>
+        </div>
+        <div class="container>">
+
+          <h3 class="rules-h3"><u>Team Members</u></h3>
+
+          <ul>
+            <img src="{% static 'hitme_game/profile2.png' %}" alt="Zaur" width="250" height="250">
+            <li>
+              <u>
+                <p>
+                  Zaur Melikov - Team Lead
+                </p>
+              </u>
+
+
+              <p>Project Contributions: Worked on gamelobby, and also collaborated with front-end team members to ensure consistent structure throughout website.</p>
+            </li>
+            <img src="{% static 'hitme_game/chaitali.png' %}" alt="Chaitali" width="250" height="250">
+            <li>
+
+              <u>
+                <p>
+                  Chaitali Kalra - Back-End Lead
+                </p>
+              </u>
+
+              <p>Project Contributions: Setup Initial Django application, Django channels, Hello World Page, Create new game, join existing game. Fixed bugs. Designed the entire synchronization logic using Django channels. Implemented blackjack logic on backend. Deployment of Django application on NGINX + Daphne server and integration with Redis.</p>
+            </li>
+            <img src="{% static 'hitme_game/beibei.jpg' %}" alt="Beibei" width="250" height="250">
+            <li>
+              <u>
+                <p>
+                  Beibei Jiang - Back-End Team
+                </p>
+              </u>
+
+
+              <p>Project Contributions: Implemented backend login/register/logout logic, global/gameroom real time chat, and solutions to bugs.</p>
+
+            </li>
+            <img src="{% static 'hitme_game/jackie.jpg' %}" alt="Jackie" width="250" height="250">
+            <li>
+              <u>
+                <p>
+                  Jackie Shan - Front-End Lead
+                </p>
+              </u>
+
+              <p>Project Contributions: Worked on about.html, rules.html, and some blackjack game logic.</p>
+
+            </li>
+            <img src="{% static 'hitme_game/raj.png' %}" alt="Raj" width="250" height="250">
+            <li>
+
+              <u>
+                <p>
+                  Rajdeep Riar - Front-End Team
+                </p>
+              </u>
+
+              <p>Project Contributions: Designed and implemented the gameroom layout, login/registration, and the overall color theme of the game. Also designed the actual playing cards.</p>
+
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

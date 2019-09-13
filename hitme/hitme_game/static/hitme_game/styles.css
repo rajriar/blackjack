@@ -1,0 +1,703 @@
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        #red {
+            color: red;
+            text-shadow: 0px 4px 3px black, 0px 8px 10px red;
+        }
+
+        #black {
+            color: black;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .jumbotron {
+            margin-top: 20px;
+            height: 200px;
+            background: #718093;
+            border: 2px solid red;
+        }
+
+        .jumbotron-gameroom {
+            margin-top: 20px;
+            height: 100px;
+            background: #718093;
+            border: 2px solid red;
+            text-align: center;
+        }
+
+        .j-tron-text {
+            text-shadow: 0px 4px 3px black, 0px 8px 10px red;
+            font-size: 7em;
+            margin-top: -40px;
+            margin-left: -60px;
+        }
+
+        .j-tron-text-gameroom {
+            text-shadow: 0px 4px 3px black, 0px 8px 10px red;
+            font-size: 4em;
+            margin-top: -2px;
+            margin-left: -60px;
+        }
+
+        .img-logo {
+            width: 200px;
+            height: 185px;
+            margin-top: -50px;
+            margin-right: 50px;
+        }
+
+        .img-logo-gameroom {
+            width: 150px;
+            height: 100px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        i {
+            padding: 5px;
+        }
+
+        .form {
+            z-index: 1;
+            position: relative;
+            color: #dcdde1;
+            margin: 2% auto;
+            /*distance around element*/
+            text-align: center;
+            padding: 15px;
+            /*distance to border */
+            width: 20%;
+            min-width: 15rem;
+            box-shadow: 0px 4px 3px black, 0px 8px 10px red;
+        }
+
+        .form input {
+            font-family: "Roboto", sans-serif;
+            outline-color: #487eb0;
+            background: #dcdde1;
+            border: 0;
+            margin: 0 0 15px 0;
+            padding: 10px;
+            width: 70%;
+            font-size: 14px;
+        }
+
+        .form button {
+            position: relative;
+            text-transform: uppercase;
+            border: 1px solid currentColor;
+            padding: 10px 15%;
+            background-color: white;
+            color: #192a56;
+            overflow: hidden;
+            background: linear-gradient(to right, #192a56 50%, #dcdde1 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all .4s ease-out;
+            &:hover,
+            &:active {
+                background-position: left bottom;
+                color: #dcdde1;
+            }
+        }
+
+        .register-form {
+            display: none;
+        }
+
+        body {
+            background-image: url(https://cdnroute.bpsgameserver.com/common/Common/Common/neutral/image/2017/12/game.gamesincmultihandblackjack.backgroundimage.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .dealer {
+            color: white;
+            text-align: center;
+            border: white 3px solid;
+            margin-top: 10px;
+        }
+
+        .gameroom-chat {
+            background-color: lightgrey;
+            width: 500px;
+            height: 150px;
+            border: white 3px solid;
+            margin-left: 28%;
+        }
+
+        .chat-box-contents {
+            margin-top: 1px;
+        }
+
+        .dealer-cards {
+            background-color: lightgrey;
+            width: 350px;
+            height: 150px;
+            border: white 3px solid;
+            text-align: center;
+        }
+
+        #player {
+            margin-top: 110px;
+        }
+
+        .player-content {
+            max-width: 100%;
+        }
+
+        .player1 {
+            background-color: lightgrey;
+            width: 300px;
+            height: 415px;
+            border: white 3px solid;
+            margin-left: 20%;
+            margin-top: 50px;
+        }
+
+        .player2 {
+            background-color: lightgrey;
+            width: 300px;
+            height: 365px;
+            border: white 3px solid;
+            margin-left: 20%;
+            margin-top: 50px;
+        }
+
+        .player3 {
+            background-color: lightgrey;
+            width: 300px;
+            height: 365px;
+            border: white 3px solid;
+            margin-left: 20%;
+            margin-top: 50px;
+        }
+
+        .players {
+/*            margin-top: 40px;*/
+            margin-right: 100px;
+        }
+
+        #leave-button {
+            margin-left: 130px;
+            margin-top: 85px;
+            background: #718093;
+            border: 2px solid red;
+            height: 80px;
+            width: 120px;
+        }
+
+        .first-row {
+            margin-top: 20px;
+        }
+        /* GAME-LOBBY.HTML CSS STARTS HERE!!!!!!!!!!**************************/
+
+        .img-logo-gamelobby {
+            /*
+  width: 150px;
+  height: 100px;*/
+            width: 9.2em;
+            height: 6.2em;
+        }
+
+        .j-tron-text-gamelobby {
+            text-shadow: 0px 4px 3px black, 0px 8px 10px red;
+            font-size: 4em;
+            /*
+  margin-top: -2px;
+  margin-left: -60px;*/
+            margin-top: -0.08em;
+            margin-left: -1em;
+        }
+
+        .jumbotron-gamelobby {
+            margin-top: 20px;
+            height: 100px;
+            background: #718093;
+            border: 2px solid red;
+            text-align: center;
+        }
+
+        .gamelobby-chat {
+            background-color: lightgrey;
+            /*
+  width: 350px;
+  height: 535px;
+  */
+            width: 22em;
+            height: 31.5em;
+            border: 3px solid red;
+        }
+
+        .new-game-card {
+            background-color: lightgrey;
+            /*
+  width: 350px;
+  height: 250px;
+  margin-top: 125px;
+  */
+            width: 22em;
+            height: 16em;
+            margin-top: 8em;
+            border: 3px solid red;
+            text-align: center;
+            max-width: 85%;
+            margin-left: 30px;
+        }
+
+        .display-global-message {
+            /*
+  margin-top: 10px;
+  margin-left: 12px;*/
+            margin-top: 0.5em;
+            margin-left: 0.8em;
+        }
+
+        .chatbox-text {
+            margin-top: 10px;
+            margin-left: 12px;
+        }
+
+        .textarea1 {
+            max-width: 95%;
+        }
+
+        .send-message {
+            margin-left: 269px;
+            margin-top: 2px;
+        }
+
+        .new-game-button {
+            margin-top: 65px;
+        }
+
+        .rules-button {
+            margin-top: 2px;
+            height: 35px;
+        }
+
+        .logout-button {}
+
+        .about-button {}
+
+        .join-existing-game-card {
+            background-color: lightgrey;
+            overflow: auto;
+            overflow-x: hidden;
+            /*  width: 350px;
+  height: 535px;*/
+            width: 22em;
+            height: 31.5em;
+            border: 3px solid red;
+            text-align: center;
+        }
+
+        .game1 {
+            background-color: lightgrey;
+            width: 60px;
+            height: 60px;
+            border: red 3px solid;
+            margin-left: 50%;
+        }
+
+        .game2 {
+            background-color: lightgrey;
+            width: 60px;
+            height: 60px;
+            border: red 3px solid;
+            margin-left: 20px;
+            margin-top: 0px;
+        }
+
+        .game3 {
+            background-color: lightgrey;
+            width: 60px;
+            height: 60px;
+            border: red 3px solid;
+            margin-left: 50%;
+            margin-top: 10px;
+        }
+
+        .game4 {
+            background-color: lightgrey;
+            width: 60px;
+            height: 60px;
+            border: red 3px solid;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            left: 0;
+            bottom: 4;
+            /*
+   height: 48px;
+   width: 45%;
+   margin-left: 420px;*/
+            height: 3em;
+            width: 45em;
+            background: #718093;
+            border: 2px solid red;
+            color: white;
+            text-align: center;
+            margin-left: 222px;
+            margin-top: 15px;
+        }
+
+        .welcome-message {
+            color: white;
+            text-align: center;
+        }
+        /* GAME-LOBBY.HTML CSS ENDS HERE!!!!!!!!!!**************************/
+        /* rules.html starts here */
+
+        .rules-para {
+            margin-left: 10px;
+        }
+
+        .rules-h3 {
+            margin-left: 10px;
+        }
+
+        .rules-leave-button {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        .rules-section {
+            margin-top: 15px;
+            border-width: 15px;
+        }
+
+        .j-tron-text-rule {
+            padding-right: 155px;
+        }
+        /* -------- Old Gameroom CSS---------- */
+        /*
+        #output {
+            font-size: 1.5em;
+            color: white;
+        }
+
+        #btndeal,
+        #myactions {
+            margin-top: -50px;
+            display: none;
+        }
+
+        .btn {
+            border-radius: 3px;
+            padding: 2px 5px;
+            color: white;
+            display: inline-block;
+            text-align: center;
+            text-shadow: 1px 1px #000000;
+            font: normal 700 24px/1 "Lato";
+	    margin-bottom: 75px;
+        }
+
+        #cover {
+            height: 110px;
+            width: 60px;
+            background-color: brown;
+            border-radius: 10px;
+            position: absolute;
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        .icard {
+            height: 100px;
+            width: 60px;
+            padding: 3px;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 10px;
+            position: absolute;
+            left: 100px;
+            display: inline-block;
+            font-family: 'Lato';
+            margin-top: 5px;
+        }
+
+        .top-card {
+            font-size: 15px;
+            line-height: 10px;
+            left: 2px;
+            top: 2px;
+        }
+
+        .content-card {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .bottom-card {
+            font-size: 15px;
+            line-height: 8px;
+            margin-top: 15px;
+            right: 2px;
+            bottom: 2px;
+            transform: rotate(-180deg);
+            -webkit-transform: rotate(-180deg);
+            -moz-transform: rotate(-180deg);
+            -ms-transform: rotate(-180deg);
+            -o-transform: rotate(-180deg);
+        }
+
+        .clubs,
+        .spades {
+            color: black;
+        }
+
+        .hearts,
+        .diams {
+            color: red;
+        }
+
+        .hearts .suit::after {
+            content: '\2665';
+        }
+
+        .diams .suit::after {
+            content: '\2666';
+        }
+
+        .spades .suit::after {
+            content: '\2660';
+        }
+
+        .clubs .suit::after {
+            content: '\2663';
+        }
+
+        #dealerHolder,
+        #playerHolder {
+            height: 180px;
+            width: 500px;
+        }
+
+        #message {
+            height: 90px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        #btnhold {
+            background-color: green;
+        }
+
+        #btnhit {
+            background-color: red;
+        }
+
+        #btndouble {
+            background-color: blue;
+        }
+
+        #btndeal {
+            background-color: purple;
+            font-size: 30px;
+        }
+
+        #maxbet {
+            background-color: red;
+            font-size: 12px;
+        }
+
+        #btnstart {
+            background-color: black;
+        }
+
+        #mybet {
+            font-size: 30px;
+        }
+
+        #start {
+            margin-top: -60px;
+        }
+
+        .total {
+            font-size: 11px;
+            margin-top: -50px;
+        }
+
+        #player-hand {
+            color: black;
+            font-size: 1.5em;
+        }
+        */
+        /* -------- End of Old Gameroom CSS---------- */
+        /* -------- New Gameroom CSS---------- */
+#output, #output1, #output2, #dealerOutput {
+/*    font-size: 1.5em;*/
+    font-size: 1rem;
+}
+
+#btndeal, #btndeal1, #btndeal2,
+#myactions, #myactions1, #myactions2 {
+    display: none;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: .3rem 1rem;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+    font: normal 700 1rem/1 "Calibri", sans-serif;
+}
+
+#cover {
+    height: 120px;
+    width: 80px;
+    background-color: brown;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.icard {
+    height: 120px;
+    width: 80px;
+    padding: 3px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    left: 100px;
+    display: inline-block;
+    font-family: 'Lato';
+}
+
+.top-card {
+    font-size: 22.5px;
+    line-height: 15px;
+    left: 2px;
+    top: 2px;
+}
+
+.content-card {
+    text-align: center;
+    font-size: 33px;
+}
+
+.bottom-card {
+    font-size: 22.5px;
+    line-height: 15px;
+    right: 2px;
+    bottom: 2px;
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+}
+
+.clubs,
+.spades {
+    color: black;
+}
+
+.hearts,
+.diams {
+    color: red;
+}
+
+.hearts .suit::after {
+    content: '\2665';
+}
+
+.diams .suit::after {
+    content: '\2666';
+}
+
+.spades .suit::after {
+    content: '\2660';
+}
+
+.clubs .suit::after {
+    content: '\2663';
+}
+
+/* height and width of player amd dealer cards */
+#dealerHolder,
+#playerHolder, #playerHolder1,
+#playerHolder2{
+    height: 130px;
+    width: 500px;
+}
+
+#message, #message1, #message2 {
+    height: 3rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#btnhold {
+    background-color: green;
+}
+
+#btnhit {
+    background-color: red;
+}
+
+#btndouble {
+    background-color: blue;
+}
+
+#btndeal, #btndeal1, #btndeal2 {
+    background-color: purple;
+    font-size: 1rem;
+}
+
+#maxbet, #maxbet1, #maxbet2 {
+    background-color: red;
+    font-size: 1rem;
+    margin-left: .5rem;
+}
+
+#btnstart {
+    background-color: black;
+}
+
+#mybet, #mybet1, #mybet2 {
+    font-size: 1rem;
+}
+
+.total {
+    font-size: 1rem;
+}
+
+#selPlayer{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.bold-heading{
+    font-weight: bold;
+}
+
+.player1 {
+    background-color: lightgrey;
+    width: 100%;
+    height: 415px;
+    border: white 3px solid;
+/*    margin-left: 20%;*/
+    margin-top: 50px;
+}
+.dealer1{
+    background-color: lightgrey;
+    width: 100%;
+    height: 365px;
+    border: white 3px solid;
+    margin-top: 25px;    
+}
+        /* -------- End of Gameroom CSS---------- */

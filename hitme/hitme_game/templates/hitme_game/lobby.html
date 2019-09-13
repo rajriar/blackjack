@@ -1,0 +1,168 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'hitme_game/styles.css' %}">
+
+    <title>Hit Me Lobby</title>
+</head>
+
+<body>
+    <div class="container container-fluid">
+
+        <!-- Start of jumbotron -->
+        <div class="jumbotron-gamelobby">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 col-sm-2 thumbnail">
+                    <img src="https://pbs.twimg.com/profile_images/1874281601/BlackjackIcon_400x400.png" alt="logo" class="img-logo-gamelobby">
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-2">
+                    <h1 class="j-tron-text-gamelobby">Game Lobby</h1>
+                </div>
+
+            </div>
+        </div>
+        <!-- End of jumbotron -->
+
+        <div class="row first-row">
+            <div class="col-lg-4">
+
+                <!-- Start of join existing game card -->
+                <div class="join-existing-game-card">
+                    <u>
+              <h3>Play with Others</h3>
+            </u>
+                    <div id="active-games-list">
+                        {% for game in active_games %}
+                        <div class="row" id="{{ game.url }}">
+                            <div class="col">
+                                <p>{{game.creator.username}}'s game, <span id="player_count">{{ game.num_players}}</span> players</p>
+                                <form action="{% url 'gameroom' game_url=game.url %}" target="_blank">
+                                    <button type="submit" class="btn btn-danger">Join Game</button>
+                                </form>
+                                <hr>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- <div class="row">
+                        <p>
+                            <div class="col">
+                                "Username", "Game Id", # Of Players, <button type="button" class="btn btn-danger">Join Game </button>
+                        </p>
+                        <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p>
+                            <div class="col">
+                                "Username", "Game Id", # Of Players, <button type="button" class="btn btn-danger">Join Game </button>
+                        </p>
+                        <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p>
+                            <div class="col">
+                                "Username", "Game Id", # Of Players, <button type="button" class="btn btn-danger">Join Game </button>
+                        </p>
+                        <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p>
+                            <div class="col">
+                                "Username", "Game Id", # Of Players, <button type="button" class="btn btn-danger">Join Game </button>
+                        </p>
+                        <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <p>
+                            <div class="col">
+                                "Username", "Game Id", # Of Players, <button type="button" class="btn btn-danger">Join Game </button>
+                        </p>
+                        <hr>
+                        </div>
+                    </div> -->
+
+
+                </div>
+                <!-- End of join existing game card -->
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <h3 class="welcome-message">Welcome {{ user }}!</h3>
+
+
+                <div class="new-game-card">
+                    <div class="display-global-message">
+                        <u>
+            <h3>New Game</h3>
+          </u>
+
+
+                    </div>
+                    <div class="new-game-button">
+                        <form method="POST", action="{% url 'create-game'%}" target="_blank">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger" href="gameroom.html">New Game</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <!-- End of rules card -->
+            </div>
+
+            <!-- Global Chat box starts here -->
+            <div class="col-lg-4">
+
+                <div class="gamelobby-chat">
+                    <div class="display-global-message">
+                        <h6>Global Chat</h6>
+			<textarea readonly id="chat-log" class="textarea1"name="name" rows="12" cols="42" placeholder="Sent messages will be displayed here!"></textarea>
+                    </div>
+
+                    <div class="chatbox-text">
+                        <h6>Username:</h6>
+			<textarea id="chat-message-input" class="textarea1" name="name" rows="3" cols="42" placeholder="Type your message here to chat globally with other players!"></textarea>
+                        <div class="send-message">
+                            <button id="chat-message-submit">Send</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="rules-button">
+                    <button type="button" class="btn btn-danger" onclick="location.href='rules'">Learn To Play</button>
+
+                    <button type="button" class="btn btn-danger" onclick= "window.location.href= '{% url 'about'%}';">About</button>
+
+                    <button type="button" class="btn btn-danger" onclick= "window.location.href = '{% url 'logout'%}';">Log Out</button>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script id="websocket_js" src="{% static 'hitme_game/lobby_ws.js' %}"></script>
+</body>
+
+</html>

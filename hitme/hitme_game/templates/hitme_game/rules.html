@@ -1,0 +1,105 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{% static 'hitme_game/styles.css' %}">
+
+  <title>Rules Page</title>
+</head>
+
+<body>
+  <div class="index-background">
+    <div class="container">
+      <div class="jumbotron-gameroom">
+        <div class="row">
+          <div class="col-lg-6 col-md-4 col-sm-2 thumbnail">
+            <img src="https://pbs.twimg.com/profile_images/1874281601/BlackjackIcon_400x400.png" alt="logo" class="img-logo-gameroom">
+          </div>
+          <div class="col-lg-6 col-md-4 col-sm-2">
+            <h1 class="j-tron-text-gameroom j-tron-text-rule">Hit Me!</h1>
+          </div>
+        </div>
+      </div>
+      <!--
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-lg-6 col-md-4 col-sm-2 thumbnail">
+                        <img src="https://pbs.twimg.com/profile_images/1874281601/BlackjackIcon_400x400.png" alt="logo" class="img-logo">
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-2">
+                        <h1 class="j-tron-text">Hit Me!</h1>
+                    </div>
+                </div>
+            </div>
+            -->
+      <div class="rules-section bg-secondary text-white border border-danger rounded">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-2">
+
+            <a href="lobby"><button class="border border-danger btn btn-light rules-leave-button">Exit to Lobby</button></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <h1 class="text-center text-dark"><u>Learn To Play Blackjack</u></h1>
+          </div>
+        </div>
+        <div class="container>">
+          <h3 class="rules-h3"><u>Rules</u></h3>
+          <p class="rules-para">
+            The goal of the player is to have a hand worth a value that exceeds the value of the dealer's hand. However, having a worth more than 21 will cause the player to lose (bust).
+          </p>
+          <p class="rules-para">
+            Once both the player and the dealer have taken their last card, their the values of their hands are compared. If the value of the player's hand is higher than the dealer's then the player wins, and vice versa.
+          </p>
+          <h3 class="rules-h3"><u>Player Action</u></h3>
+
+
+          <p class="rules-para">
+            The player can choose the following actions once if neither player nor dealer has a blackjack.
+          </p>
+
+                    <ul>
+
+                        <li>
+                            <p>
+                                "Hit" - the player takes another card. This can be repeated while the value of the player's hand does not exceed 21.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                "Double" - the player will double their bet, acquire another card and their turn will end.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                "Hold" - the player takes no card and keeps their hand as is.
+                            </p>
+                        </li>
+                    </ul>
+                    <h3 class = "rules-h3"><u>Dealer</u></h3>
+                    <p class = "rules-para">
+                        Once there are no more player actions, the face-down card of the dealer will be revealed. If required, the dealer will acquire addition cards until their hand has a value of 17 or higher. If the dealer's hand is worth more than 21, then the remaining players will have won.
+                    </p>
+                    <h3 class = "rules-h3"><u>Blackjack</u></h3>
+                    <p class = "rules-para">
+                        If the first two cards of the player has a combined value of 21, then their hand is considered a "blackjack". Having such a starting hand will automatically result in a win for the player unless the dealer also has a "blackjack". In the event that both player and dealer have "blackjack", the outcome will be a tie.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

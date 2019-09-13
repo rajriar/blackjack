@@ -1,0 +1,177 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'hitme_game/styles.css' %}">
+    <!--    <link rel="stylesheet" href="../../static/hitme_game/styles.css">-->
+    <!-- <link rel="stylesheet" href="C:\Users\Rajdeep\Desktop\workspace\sfsu\csc667-su19-Team05\hitme\hitme_game\static\hitme_game\styles.css"> -->
+    <title>Game Room</title>
+</head>
+
+<body>
+    <div class="container container-fluid">
+        <div class="jumbotron-gameroom">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 col-sm-2 thumbnail">
+                    <img src="https://pbs.twimg.com/profile_images/1874281601/BlackjackIcon_400x400.png" alt="logo" class="img-logo-gameroom">
+                </div>
+                <div class="col-lg-6 col-md-4 col-sm-2">
+                    <h1 class="j-tron-text-gameroom">Gameroom</h1>
+                </div>
+            </div>
+        </div>
+        <!-- End of Jtron-->
+        <div class="row">
+            <div class="col-lg-4">
+                <button class="btn btn-success" onclick= "window.location.href= '{% url 'lobby'%}';" id="leave-button"> Exit to Lobby</button>
+            </div>
+            <div class="col-lg-4">
+                <div class="dealer1">
+                    <!--start of num player selector -->
+                    <!-- <form action="">
+                        <fieldset style="width: 40%">
+                            <legend>
+                                <h6>Select number of players</h6>
+                            </legend>
+                            <select id="selPlayer" onchange="changePlayers()">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </fieldset>
+                    </form> -->
+                    <!--end of num player selector -->
+                    <h3>BlackJack Game</h3>
+                    <div id="start">
+                        <!-- onlick will call the Start() function in script.js -->
+                        <button id="btnstart" type="button" class="btn">Start Game</button>
+                    </div>
+                    <!-- start of dealer cards -->
+                    <div id="dealerOutput">
+                        Dealer Hand : <span id="dValue"></span>
+                        <div id="dealerHolder"></div>
+                    </div>
+                    <!-- end  of dealer cards -->
+                    <div id="countdown"></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <button class="btn btn-success" onclick=" window.open('{% url 'rules'%}','_blank')"  id="leave-button"> Learn to Play</button>
+                
+            </div>
+        </div>
+        <div class="row players">
+            <div class="col-lg-4">
+                <div class="player1" id="player-0">
+                    <center><div id="player-heading">No Player Joined!</div></center>
+                    <hr>
+                    <div class="game-box">
+                        <div id="message"></div>
+                        <div class="total">
+                            Total $<span id="dollars">100</span>
+                            <div id="betControls">
+                                <br>Bet Amount $
+                                <input type="number" id="mybet" value="5" min="1" max="100">
+                                <button id="maxbet" type="button" class="btn">Max Bet</button>
+                            </div>
+                        </div>
+                        <div id="output">
+                            Player Hand : <span id="pValue"></span>
+                            <div id="playerHolder"></div>
+                            <div id="myactions">
+                                <button id="btnhold" type="button" class="btn">Hold</button>
+                                <button id="btnhit" type="button" class="btn">Hit</button>
+                                <button id="btndouble" type="button" class="btn">Double</button>
+                            </div>
+                            <div>
+                                <button id="btndeal" type="button" class="btn">Ready</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="player1" id="player-1">
+                    <center><div id="player-heading">No Player Joined!</div></center>
+                    <hr>
+                    <div class="game-box">
+                        <div id="message"></div>
+                        <div class="total">
+                            Total $<span id="dollars">100</span>
+                            <div id="betControls">
+                                <br>Bet Amount $
+                                <input type="number" id="mybet" value="5" min="1" max="100">
+                                <button id="maxbet" type="button" class="btn">Max Bet</button>
+                            </div>
+                        </div>
+                        <div id="output">
+                            Player Hand : <span id="pValue"></span>
+                            <div id="playerHolder"></div>
+                            <div id="myactions">
+                                <button id="btnhold" type="button" class="btn">Hold</button>
+                                <button id="btnhit" type="button" class="btn">Hit</button>
+                                <button id="btndouble" type="button" class="btn">Double</button>
+                            </div>
+                            <div>
+                                <button id="btndeal" type="button" class="btn">Ready</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="player1" id="player-2">
+                    <center><div id="player-heading">No Player Joined!</div></center>
+                    <hr>
+                    <div class="game-box">
+                        <div id="message"></div>
+                        <div class="total">
+                            Total $<span id="dollars">100</span>
+                            <div id="betControls">
+                                <br>Bet Amount $
+                                <input type="number" id="mybet" value="5" min="1" max="100">
+                                <button id="maxbet" type="button" class="btn">Max Bet</button>
+                            </div>
+                        </div>
+                        <div id="output">
+                            Player Hand : <span id="pValue"></span>
+                            <div id="playerHolder"></div>
+                            <div id="myactions">
+                                <button id="btnhold" type="button" class="btn">Hold</button>
+                                <button id="btnhit" type="button" class="btn">Hit</button>
+                                <button id="btndouble" type="button" class="btn">Double</button>
+                            </div>
+                            <div>
+                                <button id="btndeal" type="button" class="btn">Ready</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row first-row">
+            <div class="col-lg-12">
+                <div class="gameroom-chat">
+                    <textarea readonly id="game-chat-log" rows="4" cols="59" placeholder="Game room Chat here"></textarea>
+                    <div class="chat-box-contents">
+                        <input id="game-chat-input" type="text" placeholder="your message here" style="width:85%"> <button id="game-chat-submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script id="websocket_js" src="{% static 'hitme_game/game_ws.js' %}" data-game="{{ game.url }}"></script>
+</body>
+
+</html>
